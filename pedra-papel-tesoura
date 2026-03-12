@@ -1,0 +1,76 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	int Player1, Player2;
+	
+	cout<<"=====Pedra, Papel e Tesoura=====\n";
+	cout<<"Turno do: Jogador 1\n";
+	cout<<"Escolha:\n";
+	cout<<"[1]Pedra\n[2]Papel\n[3]Tesoura\n";
+	cin>>Player1;
+	
+	system("cls");
+	
+	cout<<"=====Pedra, Papel e Tesoura=====\n";
+	cout<<"Turno do: Jogador 2\n";
+	cout<<"Escolha:\n";
+	cout<<"[1]Pedra\n[2]Papel\n[3]Tesoura\n";
+	cin>>Player2;
+	
+	if(Player1 > 3 || Player2 > 3 || Player1 < 1 || Player2 < 1)
+	{
+		cout<<"algum dos jogadores não escolheu nenhuma das alternativas";
+	}
+	
+	else
+	{
+		system("cls");
+	
+		if(Player1 < Player2 && Player2 != 2)
+		{
+			cout<<"=====Pedra, Papel e Tesoura=====\n";
+			cout<<"O jogador 1 venceu!\n";
+			cout<<"Pedra ganha de Tesoura.";
+		}
+			else if(Player2 < Player1 && Player1 != 2)
+			{
+				cout<<"=====Pedra, Papel e Tesoura=====\n";
+				cout<<"O jogador 2 venceu!\n";
+				cout<<"Pedra ganha de Tesoura.";
+			}
+				else if(Player1 < Player2 && Player2 != 3)
+				{
+					cout<<"=====Pedra, Papel e Tesoura=====\n";
+					cout<<"O jogador 2 venceu!\n";
+					cout<<"Papel ganha de Pedra.";
+				}
+					else if(Player2 < Player1 && Player1 != 3)
+					{
+						cout<<"=====Pedra, Papel e Tesoura=====\n";
+						cout<<"O jogador 1 venceu!\n";
+						cout<<"Papel ganha de Pedra.";
+					}
+						else if(Player1 > Player2 && Player2 != 1)
+						{
+							cout<<"=====Pedra, Papel e Tesoura=====\n";
+							cout<<"O jogador 1 venceu!\n";
+							cout<<"Tesoura ganha de Papel.";
+						}
+							else if(Player2 > Player1 && Player1 != 1)
+							{
+								cout<<"=====Pedra, Papel e Tesoura=====\n";
+								cout<<"O jogador 2 venceu!\n";
+								cout<<"Tesoura ganha de Papel.";
+							}
+								else
+								{
+									cout<<"=====Pedra, Papel e Tesoura=====\n";
+									cout<<"O resultado foi embate!";
+								}
+		
+	}
+							
+	return 0;	
+}
